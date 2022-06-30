@@ -1,0 +1,9 @@
+.color-background{
+    border:2px solid crimson;
+    color: black;
+    background: chartreuse;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 23px;
+    margin: auto;
+
+}
