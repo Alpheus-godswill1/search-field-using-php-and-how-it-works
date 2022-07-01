@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `uploaded_files`
+-- Table structure for table `articles`
 --
 
 CREATE TABLE articles (
@@ -36,33 +36,39 @@ CREATE TABLE articles (
     	a_date datetime not null
 );
 --
--- Dumping data for table `uploaded_files`
+-- Dumping data for table `articles`
 --
 INSERT INTO `articles` (`a_title`, `a_text`, `a_author`, `a_date`) VALUES(`Nine ways to become rich.`,`which involves focusing ,deligence,relationship,programming etc.`,`Admin`,`2022-06-30 06:44:20`);
 
 
 INSERT INTO `articles` (`a_title`, `a_text`, `a_author`, `a_date`) VALUES(`Most recent humans on earth to become rich.`,`which involves ,Alpheus Godswill Umanah ,Alpheus Umanah,Alphi,excercising etc.`,`Alpheus_Godswill`,`2022-05-30 07:34:20`);
 
+INSERT INTO `articles` (`a_title`, `a_text`, `a_author`, `a_date`) VALUES(`How to take quality pictures and look nice in them.`,`which involves ,steady hands on camera,confidence of the photographer,smiling at the camera etc.`,'Admin_rep',`2021-03-02 08:21:10`);
+
+
+---
+-- Updated the articles table in the database_search 
+UPDATE `articles` SET `a_author` = 'Admin_rep' WHERE `articles`.`a_id` = 3;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `uploaded_files`
+-- Indexes for table `articles`
 --
-ALTER TABLE `pushed`
-  ADD PRIMARY KEY (`fileid`);
+ALTER TABLE `articles`
+  ADD PRIMARY KEY (`a_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `uploaded_files`
+-- AUTO_INCREMENT for table `articles`
 --
-ALTER TABLE `pushed`
-  MODIFY `file_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE `articles`
+  MODIFY `a_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
